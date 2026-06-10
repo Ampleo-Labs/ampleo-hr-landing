@@ -1573,24 +1573,18 @@ body.modal-open { overflow: hidden; }
           <span class="form-error" id="err-email">Please enter a valid email address.</span>
         </div>
         <div class="form-field">
-          <label for="mf-phone">Phone</label>
-          <input type="tel" id="mf-phone" name="phone" placeholder="(555) 000-0000">
-        </div>
-        <div class="form-field">
           <label for="mf-company">Company<span class="req">*</span></label>
           <input type="text" id="mf-company" name="company" placeholder="Acme Corp" required>
           <span class="form-error" id="err-company">Please enter your company name.</span>
         </div>
         <div class="form-field">
-          <label for="mf-employees">Company Size</label>
-          <select id="mf-employees" name="num_employees">
-            <option value="">Select headcount…</option>
-            <option value="1-10">1–10 employees</option>
-            <option value="11-50">11–50 employees</option>
-            <option value="51-200">51–200 employees</option>
-            <option value="201-500">201–500 employees</option>
-            <option value="500+">500+ employees</option>
-          </select>
+          <label for="mf-jobtitle">Job Title<span class="req">*</span></label>
+          <input type="text" id="mf-jobtitle" name="jobtitle" placeholder="HR Manager" required>
+          <span class="form-error" id="err-jobtitle">Please enter your job title.</span>
+        </div>
+        <div class="form-field">
+          <label for="mf-source">How did you first learn about Amplēo?</label>
+          <input type="text" id="mf-source" name="how_did_you_first_learn_about_ampleo_" placeholder="Google, referral, LinkedIn…">
         </div>
         <div class="form-success" id="mf-success">
           Thanks! We'll be in touch within one business day to schedule your strategy call.
@@ -1622,7 +1616,7 @@ body.modal-open { overflow: hidden; }
 
         // Client-side validation
         var valid = true;
-        ['firstname','lastname','email','company'].forEach(function (name) {
+        ['firstname','lastname','email','company','jobtitle'].forEach(function (name) {
           var input = form.querySelector('[name="' + name + '"]');
           var err = document.getElementById('err-' + name);
           if (!input || !input.value.trim()) {
