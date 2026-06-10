@@ -12,10 +12,6 @@
 <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 
 <style>
-/* =========================================================
-   Amplēo HR Landing Page
-   Medium-length, 7 sections, WordPress-paste-ready
-========================================================= */
 
 :root {
   --dark-moss: #1D4C3D;
@@ -52,9 +48,6 @@
 .ampleo-hr button.btn { font-family: var(--font); cursor: pointer; }
 .ampleo-hr img { max-width: 100%; height: auto; display: block; }
 
-/* =========================
-   Section base
-========================= */
 .section {
   padding: 88px 64px;
   position: relative;
@@ -70,9 +63,6 @@
 .section__head--center .h2 { display: block; }
 .section__head--center .lede { max-width: 720px; margin-left: auto; margin-right: auto; }
 
-/* =========================
-   Type
-========================= */
 .eyebrow {
   display: inline-block;
   font-size: 12px;
@@ -159,9 +149,6 @@
 
 .micro--light { color: rgba(255,255,255,0.7); }
 
-/* =========================
-   Buttons
-========================= */
 .btn {
   display: inline-flex;
   align-items: center;
@@ -212,9 +199,6 @@
 
 .btn--full { width: 100%; }
 
-/* =========================
-   S1 — HERO (full-bleed image with text overlay + form)
-========================= */
 .hero {
   background: var(--dark-moss);
   position: relative;
@@ -316,7 +300,6 @@
   font-style: normal;
 }
 
-/* Logo strip under hero — gradient fades into the page bg at both ends */
 .logo-strip {
   background: linear-gradient(
     to right,
@@ -374,9 +357,6 @@
   100% { transform: translateX(-50%); }
 }
 
-/* =========================
-   S2 — STATS
-========================= */
 .section--stats {
   background: var(--washed-stone);
   padding: 72px 64px;
@@ -419,9 +399,6 @@
   color: var(--ink-3);
 }
 
-/* =========================
-   S3 — SOLUTION
-========================= */
 .section--solution { background: var(--white); }
 
 .solution {
@@ -524,9 +501,6 @@
   line-height: 1.5;
 }
 
-/* =========================
-   S4 — PROCESS
-========================= */
 .section--process {
   background: var(--anchor-green);
   color: var(--white);
@@ -604,9 +578,6 @@
 
 .section--process-cta { text-align: center; margin-top: 16px; }
 
-/* =========================
-   S5 — OUTCOMES (case study + testimonials)
-========================= */
 .section--outcomes {
   background: var(--washed-stone);
   padding-bottom: 48px;
@@ -763,9 +734,6 @@
 }
 .outcomes__link:hover { color: var(--dark-moss); }
 
-/* =========================
-   S6 — FORM
-========================= */
 .section--form {
   background: var(--white);
 }
@@ -865,7 +833,6 @@
   font-style: normal;
 }
 
-/* HubSpot form styling overrides */
 .hs-form-private fieldset { max-width: 100% !important; }
 .hs-form-private .hs-input {
   width: 100% !important;
@@ -920,9 +887,6 @@
   font-weight: 600;
 }
 
-/* =========================
-   S7 — FOOTER
-========================= */
 .footer {
   background: var(--anchor-green);
   color: rgba(255,255,255,0.85);
@@ -1031,9 +995,6 @@
   line-height: 1;
 }
 
-/* =========================
-   CTA Strip (S6)
-========================= */
 .section--cta-strip { background: var(--washed-stone); padding-top: 24px; padding-bottom: 64px; }
 
 .cta-strip {
@@ -1057,9 +1018,6 @@
   letter-spacing: 0.02em;
 }
 
-/* =========================
-   MODAL / LIGHTBOX
-========================= */
 .ampleo-hr-modal {
   position: fixed;
   inset: 0;
@@ -1168,11 +1126,9 @@
   background: var(--anchor-green);
 }
 
-/* HubSpot form inside the modal — restyled to match the page */
 #hs-modal-form .hs-form-private fieldset { max-width: 100% !important; }
 #hs-modal-form .hs-form-private .hs-form-field { margin-bottom: 16px !important; }
 
-/* Nuclear option: every text element inside the form is black, period. */
 #hs-modal-form,
 #hs-modal-form *,
 #hs-modal-form label,
@@ -1204,7 +1160,6 @@
 }
 #hs-modal-form label span { font-weight: 700 !important; font-size: 13px !important; }
 
-/* Re-color the few elements that need to NOT be black */
 #hs-modal-form .hs-form-required,
 #hs-modal-form label .hs-form-required { color: var(--coral) !important; margin-left: 3px !important; font-weight: 700 !important; }
 #hs-modal-form a,
@@ -1333,11 +1288,6 @@
 
 body.modal-open { overflow: hidden; }
 
-/* =========================
-   Responsive
-========================= */
-
-/* Wide monitor cap — prevents type/padding from blowing out on 1600px+ screens */
 @media (min-width: 1600px) {
   .section { padding: 104px 64px; }
   .footer { padding: 88px 64px 40px; }
@@ -1346,11 +1296,6 @@ body.modal-open { overflow: hidden; }
   .hero__copy-inner { max-width: 680px; }
 }
 
-/* Standard desktop sweet spot (no override needed — base styles target this) */
-
-/* Tablet landscape / small laptop (1024px–1280px boundary handled by base) */
-
-/* Tablet portrait & small laptop */
 @media (max-width: 1024px) {
   .section { padding: 64px 40px; }
   .footer { padding: 56px 40px 32px; }
@@ -1374,7 +1319,6 @@ body.modal-open { overflow: hidden; }
   .cta-strip__action { align-items: flex-start; }
 }
 
-/* Tablet portrait (≤768px) — stats stack to single column, modal tighter */
 @media (max-width: 768px) {
   .stats { grid-template-columns: 1fr; gap: 32px; }
   .case-study__stats { grid-template-columns: 1fr; gap: 16px; }
@@ -1411,20 +1355,11 @@ body.modal-open { overflow: hidden; }
 </head>
 <body>
 
-<!-- =================================================================
-     PASTE THIS BLOCK INTO WORDPRESS (Custom HTML block / page template)
-     Class scope: .ampleo-hr  (prevents theme CSS conflicts)
-     IMAGE: replace src="hr-hero.png" with your uploaded WP media URL
-================================================================== -->
 <div class="ampleo-hr">
 
-<!-- ============================================================
-     S1 · HERO — text + image (no nav)
-============================================================ -->
 <section class="section hero">
   <div class="hero__grid">
 
-    <!-- LEFT: copy + form trigger -->
     <div class="hero__copy">
       <div class="hero__copy-inner">
         <span class="eyebrow">Fractional · Embedded · On-Demand HR</span>
@@ -1443,15 +1378,6 @@ body.modal-open { overflow: hidden; }
       </div>
     </div>
 
-    <!-- RIGHT: image visual -->
-    <!--
-      THE WOMAN IMAGE is loaded via CSS background-image on .hero__visual
-      → File: hr-hero.png (sitting next to this HTML)
-      → For WordPress: upload the image to your Media Library and replace
-        the url("hr-hero.png") in the .hero__visual CSS with the WP URL.
-      → background-size: auto 165% + position 50% 42% crops out the Amplēo HR
-        logo at top and the "You Asked for Headcount" text band at bottom.
-    -->
     <div class="hero__visual" role="img" aria-label="HR professional in consultation — Amplēo HR">
 
       <div class="hero__visual-badge">
@@ -1462,7 +1388,6 @@ body.modal-open { overflow: hidden; }
 
   </div>
 
-  <!-- Logo strip (still part of hero section) -->
   <div class="logo-strip">
     <div class="logo-strip__inner">
       <div class="logo-strip__label">Trusted by leaders at</div>
@@ -1475,7 +1400,7 @@ body.modal-open { overflow: hidden; }
           <img src="https://hr.ampleo.com/wp-content/themes/ampleo/assets/trusted/jdawgs.svg" alt="J.Dawgs">
           <img src="https://hr.ampleo.com/wp-content/themes/ampleo/assets/trusted/cidilabslogo.svg" alt="Cidilabs">
           <img src="https://hr.ampleo.com/wp-content/themes/ampleo/assets/trusted/waterloo-logo.png" alt="Waterloo">
-          <!-- duplicate set for seamless loop -->
+          
           <img src="https://hr.ampleo.com/wp-content/themes/ampleo/assets/trusted/anaconda_secondary_logo.svg" alt="" aria-hidden="true">
           <img src="https://hr.ampleo.com/wp-content/themes/ampleo/assets/trusted/made-by-mary-1.svg" alt="" aria-hidden="true">
           <img src="https://hr.ampleo.com/wp-content/themes/ampleo/assets/trusted/manly-bands-logo-long.svg" alt="" aria-hidden="true">
@@ -1489,10 +1414,6 @@ body.modal-open { overflow: hidden; }
   </div>
 </section>
 
-
-<!-- ============================================================
-     S2 · STATS — quantified proof
-============================================================ -->
 <section class="section section--stats">
   <div class="section__inner">
     <div class="stats">
@@ -1515,10 +1436,6 @@ body.modal-open { overflow: hidden; }
   </div>
 </section>
 
-
-<!-- ============================================================
-     S3 · SOLUTION — what we do
-============================================================ -->
 <section class="section section--solution">
   <div class="section__inner">
     <div class="solution">
@@ -1567,10 +1484,6 @@ body.modal-open { overflow: hidden; }
   </div>
 </section>
 
-
-<!-- ============================================================
-     S4 · PROCESS — how it works
-============================================================ -->
 <section class="section section--process" id="how-it-works">
   <div class="section__inner">
 
@@ -1609,10 +1522,6 @@ body.modal-open { overflow: hidden; }
   </div>
 </section>
 
-
-<!-- ============================================================
-     S5 · OUTCOMES — case study + testimonials
-============================================================ -->
 <section class="section section--outcomes">
   <div class="section__inner">
 
@@ -1621,7 +1530,6 @@ body.modal-open { overflow: hidden; }
       <h2 class="h2">Real Outcomes for Real Operators.</h2>
     </div>
 
-    <!-- Featured case study -->
     <article class="case-study">
       <div class="case-study__top">
         <div class="case-study__client">Anaconda · 30-person tech startup</div>
@@ -1655,7 +1563,6 @@ body.modal-open { overflow: hidden; }
       </div>
     </article>
 
-    <!-- Supporting testimonials -->
     <div class="testimonials">
       <div class="testimonial">
         <blockquote>
@@ -1690,10 +1597,6 @@ body.modal-open { overflow: hidden; }
   </div>
 </section>
 
-
-<!-- ============================================================
-     S6 · GET STARTED — compact CTA strip (form lives in the modal)
-============================================================ -->
 <section class="section section--cta-strip" id="contact">
   <div class="section__inner cta-strip">
     <div class="cta-strip__copy">
@@ -1708,14 +1611,9 @@ body.modal-open { overflow: hidden; }
   </div>
 </section>
 
-
-<!-- ============================================================
-     S7 · FOOTER — final CTA + nav
-============================================================ -->
 <footer class="footer">
   <div class="section__inner">
 
-    <!-- Footer CTA banner -->
     <div class="footer__cta">
       <div>
         <h3>Not Ready for Full-Time HR? <span class="accent">You Don't Need to Be.</span></h3>
@@ -1724,7 +1622,6 @@ body.modal-open { overflow: hidden; }
       <button type="button" class="btn btn--primary" data-open-modal>Schedule a Free Consultation</button>
     </div>
 
-    <!-- Main footer content -->
     <div class="footer__main">
 
       <div>
@@ -1770,7 +1667,6 @@ body.modal-open { overflow: hidden; }
 
     </div>
 
-    <!-- Footer bottom: copyright + legal -->
     <div class="footer__bottom">
       <div>&copy; 2026 Amplēo. All rights reserved.</div>
       <div class="footer__bottom-links">
@@ -1783,10 +1679,6 @@ body.modal-open { overflow: hidden; }
   </div>
 </footer>
 
-<!-- ============================================================
-     LIGHTBOX / MODAL — Talk to an HR Expert
-     Triggered by any element with [data-open-modal] attribute
-============================================================ -->
 <div class="ampleo-hr-modal" id="ampleo-modal" role="dialog" aria-modal="true" aria-labelledby="ampleo-modal-title" hidden>
   <div class="ampleo-hr-modal__dialog">
 
@@ -1804,7 +1696,7 @@ body.modal-open { overflow: hidden; }
     </div>
 
     <div class="ampleo-hr-modal__body">
-      <!-- HubSpot form renders into this container via target option -->
+      
       <div id="hs-modal-form"></div>
     </div>
 
@@ -1812,13 +1704,7 @@ body.modal-open { overflow: hidden; }
 </div>
 
 </div>
-<!-- =================================================================
-     END OF PASTE BLOCK
-================================================================== -->
 
-<!-- ============================================================
-     HubSpot form embed (renders into the modal)
-============================================================ -->
 <script charset="utf-8" type="text/javascript" src="https://js.hsforms.net/forms/embed/v2.js"></script>
 <script>
   (function () {
