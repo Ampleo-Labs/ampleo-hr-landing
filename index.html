@@ -825,59 +825,6 @@
   font-style: normal;
 }
 
-.hs-form-private fieldset { max-width: 100% !important; }
-.hs-form-private .hs-input {
-  width: 100% !important;
-  padding: 13px 14px !important;
-  border: 1px solid var(--line) !important;
-  border-radius: 0 !important;
-  font-size: 14px !important;
-  font-family: var(--font) !important;
-  background: var(--white) !important;
-  font-weight: 400 !important;
-  color: var(--ink-1) !important;
-}
-.hs-form-private .hs-input:focus {
-  outline: 2px solid var(--electric-lime) !important;
-  outline-offset: 1px !important;
-  border-color: var(--cactus-green) !important;
-}
-.hs-form-private label {
-  display: block !important;
-  font-size: 12px !important;
-  font-weight: 700 !important;
-  margin-bottom: 6px !important;
-  color: var(--anchor-green) !important;
-  text-transform: uppercase !important;
-  letter-spacing: 0.05em !important;
-  font-family: var(--font) !important;
-}
-.hs-form-private .hs-form-field { margin-bottom: 16px !important; }
-.hs-form-private .hs-button {
-  width: 100% !important;
-  background: var(--electric-lime) !important;
-  color: var(--anchor-green) !important;
-  border: 2px solid var(--electric-lime) !important;
-  padding: 16px 24px !important;
-  border-radius: 0 !important;
-  font-size: 14px !important;
-  font-family: var(--font) !important;
-  font-weight: 800 !important;
-  text-transform: uppercase !important;
-  letter-spacing: 0.06em !important;
-  cursor: pointer !important;
-  min-height: 52px !important;
-}
-.hs-form-private .hs-button:hover { background: #d4ff1a !important; border-color: #d4ff1a !important; }
-.hs-form-private .hs-error-msgs { color: var(--coral) !important; font-size: 11px !important; font-weight: 700 !important; list-style: none !important; padding-left: 0 !important; margin-top: 4px !important; }
-.hs-form-private .submitted-message {
-  padding: 24px;
-  background: rgba(204,255,0,0.15);
-  border-left: 4px solid var(--electric-lime);
-  color: var(--anchor-green);
-  font-size: 16px;
-  font-weight: 600;
-}
 
 .footer {
   background: var(--anchor-green);
@@ -1118,165 +1065,82 @@
   background: var(--anchor-green);
 }
 
-#hs-modal-form .hs-form-private fieldset { max-width: 100% !important; }
-#hs-modal-form .hs-form-private .hs-form-field { margin-bottom: 16px !important; }
-
-#hs-modal-form,
-#hs-modal-form *,
-#hs-modal-form label,
-#hs-modal-form label *,
-#hs-modal-form legend,
-#hs-modal-form span,
-#hs-modal-form p,
-#hs-modal-form .hs-form-field > label,
-#hs-modal-form .hs-form-field label span,
-#hs-modal-form .hs-field-desc,
-#hs-modal-form .hs-main-font-element,
-#hs-modal-form .hs-richtext,
-#hs-modal-form .hs-richtext p {
-  color: #000000 !important;
+#hs-modal-form { display: flex; flex-direction: column; gap: 14px; }
+#hs-modal-form .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+#hs-modal-form .form-field { display: flex; flex-direction: column; gap: 6px; }
+#hs-modal-form label {
+  display: block;
+  font-family: var(--font);
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  color: var(--white);
+  line-height: 1.3;
 }
-
-#hs-modal-form .hs-form-private label,
-#hs-modal-form .hs-form-private legend,
-#hs-modal-form label,
-#hs-modal-form .hs-form-field > label {
-  display: block !important;
-  font-family: var(--font) !important;
-  font-size: 13px !important;
-  font-weight: 700 !important;
-  letter-spacing: 0.02em !important;
-  text-transform: none !important;
-  margin-bottom: 7px !important;
-  line-height: 1.3 !important;
+#hs-modal-form .req { color: var(--coral); margin-left: 2px; }
+#hs-modal-form input,
+#hs-modal-form select,
+#hs-modal-form textarea {
+  width: 100%;
+  padding: 13px 14px;
+  border: 1.5px solid var(--line);
+  border-radius: 8px;
+  font-family: var(--font);
+  font-size: 15px;
+  font-weight: 500;
+  background: var(--white);
+  color: #000;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
 }
-#hs-modal-form label span { font-weight: 700 !important; font-size: 13px !important; }
-
-#hs-modal-form .hs-form-required,
-#hs-modal-form label .hs-form-required { color: var(--coral) !important; margin-left: 3px !important; font-weight: 700 !important; }
-#hs-modal-form a,
-#hs-modal-form a * { color: var(--cactus-green) !important; }
-#hs-modal-form .hs-button,
-#hs-modal-form .hs-button *,
-#hs-modal-form input[type="submit"] { color: var(--white) !important; }
-
-#hs-modal-form .hs-form-private .hs-input,
-#hs-modal-form input.hs-input,
-#hs-modal-form select.hs-input,
-#hs-modal-form textarea.hs-input {
-  width: 100% !important;
-  padding: 13px 14px !important;
-  border: 1.5px solid var(--line) !important;
-  border-radius: 8px !important;
-  font-family: var(--font) !important;
-  font-size: 15px !important;
-  font-weight: 500 !important;
-  background: var(--white) !important;
-  color: #000000 !important;
-  transition: border-color 0.15s ease, box-shadow 0.15s ease !important;
+#hs-modal-form input::placeholder,
+#hs-modal-form textarea::placeholder { color: #6b6b6b; font-weight: 400; }
+#hs-modal-form input:focus,
+#hs-modal-form select:focus,
+#hs-modal-form textarea:focus {
+  outline: none;
+  border-color: var(--cactus-green);
+  box-shadow: 0 0 0 3px rgba(204,255,0,0.25);
 }
-#hs-modal-form input.hs-input::placeholder,
-#hs-modal-form textarea.hs-input::placeholder {
-  color: #6b6b6b !important;
-  font-weight: 400 !important;
-  opacity: 1 !important;
+#hs-modal-form select {
+  appearance: none;
+  background-image: linear-gradient(45deg, transparent 50%, var(--anchor-green) 50%), linear-gradient(135deg, var(--anchor-green) 50%, transparent 50%);
+  background-position: calc(100% - 18px) 22px, calc(100% - 13px) 22px;
+  background-size: 5px 5px, 5px 5px;
+  background-repeat: no-repeat;
+  padding-right: 36px;
 }
-#hs-modal-form .hs-form-private .hs-input:focus {
-  outline: none !important;
-  border-color: var(--cactus-green) !important;
-  box-shadow: 0 0 0 3px rgba(204,255,0,0.25) !important;
+#hs-modal-form .form-error { color: var(--coral); font-size: 12px; font-weight: 600; display: none; }
+#hs-modal-form .form-error.visible { display: block; }
+#hs-modal-form .form-submit {
+  width: 100%;
+  background: var(--coral);
+  color: var(--white);
+  border: 2px solid var(--coral);
+  padding: 16px 32px;
+  border-radius: 999px;
+  font-family: var(--font);
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  min-height: 54px;
+  margin-top: 6px;
+  transition: background 0.2s ease, transform 0.15s ease, box-shadow 0.2s ease;
 }
-#hs-modal-form .hs-form-private select.hs-input { appearance: none !important; -webkit-appearance: none !important; background-image: linear-gradient(45deg, transparent 50%, var(--anchor-green) 50%), linear-gradient(135deg, var(--anchor-green) 50%, transparent 50%) !important; background-position: calc(100% - 18px) 22px, calc(100% - 13px) 22px !important; background-size: 5px 5px, 5px 5px !important; background-repeat: no-repeat !important; padding-right: 36px !important; }
-#hs-modal-form .hs-form-private textarea.hs-input { min-height: 110px !important; resize: vertical !important; }
-
-#hs-modal-form .hs-form-private .inputs-list { list-style: none !important; padding-left: 0 !important; margin: 0 !important; }
-#hs-modal-form .hs-form-private .hs-form-checkbox label,
-#hs-modal-form .hs-form-private .hs-form-radio label {
-  font-family: var(--font) !important;
-  font-size: 14px !important;
-  font-weight: 400 !important;
-  text-transform: none !important;
-  letter-spacing: 0 !important;
-  color: var(--ink-1) !important;
-  display: flex !important;
-  align-items: center !important;
-  gap: 10px !important;
-  margin-bottom: 8px !important;
-  cursor: pointer !important;
+#hs-modal-form .form-submit:hover:not(:disabled) { background: #e85942; border-color: #e85942; transform: translateY(-1px); box-shadow: 0 8px 22px rgba(254,101,79,0.32); }
+#hs-modal-form .form-submit:disabled { opacity: 0.6; cursor: not-allowed; }
+#hs-modal-form .form-success {
+  display: none;
+  padding: 24px;
+  background: rgba(204,255,0,0.18);
+  border-left: 4px solid var(--electric-lime);
+  border-radius: 8px;
+  color: var(--white);
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.5;
 }
-#hs-modal-form .hs-form-private .hs-form-checkbox input,
-#hs-modal-form .hs-form-private .hs-form-radio input {
-  accent-color: var(--coral) !important;
-  width: 16px !important;
-  height: 16px !important;
-}
-
-#hs-modal-form .hs-form-private .hs-error-msgs {
-  list-style: none !important;
-  padding-left: 0 !important;
-  margin-top: 5px !important;
-}
-#hs-modal-form .hs-form-private .hs-error-msg,
-#hs-modal-form .hs-form-private .hs-main-font-element {
-  color: var(--coral) !important;
-  font-family: var(--font) !important;
-  font-size: 12px !important;
-  font-weight: 600 !important;
-  letter-spacing: 0 !important;
-  text-transform: none !important;
-}
-
-#hs-modal-form .hs-form-private .hs-button,
-#hs-modal-form .hs-form-private input[type="submit"] {
-  width: 100% !important;
-  background: var(--coral) !important;
-  color: var(--white) !important;
-  border: 2px solid var(--coral) !important;
-  padding: 16px 32px !important;
-  border-radius: 999px !important;
-  font-family: var(--font) !important;
-  font-size: 15px !important;
-  font-weight: 600 !important;
-  letter-spacing: 0.01em !important;
-  text-transform: none !important;
-  cursor: pointer !important;
-  min-height: 54px !important;
-  margin-top: 10px !important;
-  transition: background 0.2s ease, transform 0.15s ease, box-shadow 0.2s ease !important;
-}
-#hs-modal-form .hs-form-private .hs-button:hover,
-#hs-modal-form .hs-form-private input[type="submit"]:hover {
-  background: #e85942 !important;
-  border-color: #e85942 !important;
-  transform: translateY(-1px) !important;
-  box-shadow: 0 8px 22px rgba(254,101,79,0.32) !important;
-}
-
-#hs-modal-form .hs-form-private .legal-consent-container,
-#hs-modal-form .hs-form-private .hs-richtext {
-  font-family: var(--font) !important;
-  font-size: 12px !important;
-  font-weight: 400 !important;
-  color: var(--ink-3) !important;
-  line-height: 1.5 !important;
-  margin-top: 6px !important;
-}
-#hs-modal-form .hs-form-private .legal-consent-container p,
-#hs-modal-form .hs-form-private .hs-richtext p { margin-bottom: 8px !important; }
-#hs-modal-form .hs-form-private a { color: var(--cactus-green) !important; text-decoration: underline !important; }
-
-#hs-modal-form .submitted-message,
-#hs-modal-form .hs_submitted_message {
-  padding: 24px !important;
-  background: rgba(204,255,0,0.18) !important;
-  border-left: 4px solid var(--electric-lime) !important;
-  border-radius: 8px !important;
-  color: var(--anchor-green) !important;
-  font-family: var(--font) !important;
-  font-size: 16px !important;
-  font-weight: 600 !important;
-  line-height: 1.5 !important;
-}
+#hs-modal-form .form-success.visible { display: block; }
+@media (max-width: 560px) { #hs-modal-form .form-row { grid-template-columns: 1fr; } }
 
 body.modal-open { overflow: hidden; }
 
@@ -1690,7 +1554,50 @@ body.modal-open { overflow: hidden; }
 
     <div class="ampleo-hr-modal__body">
       
-      <div id="hs-modal-form"></div>
+      <form id="hs-modal-form" novalidate>
+        <div class="form-row">
+          <div class="form-field">
+            <label for="mf-firstname">First Name<span class="req">*</span></label>
+            <input type="text" id="mf-firstname" name="firstname" placeholder="Jane" required>
+            <span class="form-error" id="err-firstname">Please enter your first name.</span>
+          </div>
+          <div class="form-field">
+            <label for="mf-lastname">Last Name<span class="req">*</span></label>
+            <input type="text" id="mf-lastname" name="lastname" placeholder="Smith" required>
+            <span class="form-error" id="err-lastname">Please enter your last name.</span>
+          </div>
+        </div>
+        <div class="form-field">
+          <label for="mf-email">Work Email<span class="req">*</span></label>
+          <input type="email" id="mf-email" name="email" placeholder="jane@company.com" required>
+          <span class="form-error" id="err-email">Please enter a valid email address.</span>
+        </div>
+        <div class="form-field">
+          <label for="mf-phone">Phone</label>
+          <input type="tel" id="mf-phone" name="phone" placeholder="(555) 000-0000">
+        </div>
+        <div class="form-field">
+          <label for="mf-company">Company<span class="req">*</span></label>
+          <input type="text" id="mf-company" name="company" placeholder="Acme Corp" required>
+          <span class="form-error" id="err-company">Please enter your company name.</span>
+        </div>
+        <div class="form-field">
+          <label for="mf-employees">Company Size</label>
+          <select id="mf-employees" name="num_employees">
+            <option value="">Select headcount…</option>
+            <option value="1-10">1–10 employees</option>
+            <option value="11-50">11–50 employees</option>
+            <option value="51-200">51–200 employees</option>
+            <option value="201-500">201–500 employees</option>
+            <option value="500+">500+ employees</option>
+          </select>
+        </div>
+        <div class="form-success" id="mf-success">
+          Thanks! We'll be in touch within one business day to schedule your strategy call.
+        </div>
+        <div class="form-error" id="mf-global-error" style="font-size:14px;"></div>
+        <button type="submit" class="form-submit">Book Your Strategy Call</button>
+      </form>
     </div>
 
   </div>
@@ -1698,113 +1605,74 @@ body.modal-open { overflow: hidden; }
 
 </div>
 
-<script charset="utf-8" type="text/javascript" src="https://js.hsforms.net/forms/embed/v2.js"></script>
 <script>
   (function () {
-    // Force-paint every text element inside the form. Three properties are set
-    // on each element to defeat any color/opacity/text-fill tricks HubSpot's
-    // stylesheet might use:  color, opacity, -webkit-text-fill-color.
-    function paintForm(root) {
-      if (!root) return;
-      // Brute-force: every element inside the form gets WHITE for contrast
-      // against the dark anchor-green modal background.
-      // We re-color the input fields (black text on white bg) and the
-      // few elements that should NOT be white (asterisks, errors, links).
-      root.querySelectorAll('*').forEach(function (el) {
-        var tag = el.tagName;
-        if (tag === 'INPUT' && (el.type === 'submit' || el.type === 'button')) return;
-        if (tag === 'BUTTON') return;
-        if (el.classList.contains('hs-form-required')) return;
-        if (el.classList.contains('hs-error-msg')) return;
-        if (el.classList.contains('hs-main-font-element')) return;
-        if (tag === 'A') return;
-        // Inputs themselves keep dark text (handled below). Skip them here.
-        if (el.classList && el.classList.contains('hs-input')) return;
-        el.style.setProperty('color', '#FFFFFF', 'important');
-        el.style.setProperty('opacity', '1', 'important');
-        el.style.setProperty('-webkit-text-fill-color', '#FFFFFF', 'important');
-      });
-      // Labels: bigger / bolder
-      root.querySelectorAll('label, legend').forEach(function (el) {
-        el.style.setProperty('font-family', "'Outfit', sans-serif", 'important');
-        el.style.setProperty('font-size', '13px', 'important');
-        el.style.setProperty('font-weight', '700', 'important');
-        el.style.setProperty('letter-spacing', '0.02em', 'important');
-        el.style.setProperty('text-transform', 'none', 'important');
-        el.style.setProperty('margin-bottom', '7px', 'important');
-        el.style.setProperty('display', 'block', 'important');
-      });
-      // Inputs: black text, bright white background to pop against the dark modal
-      root.querySelectorAll('input.hs-input, select.hs-input, textarea.hs-input').forEach(function (el) {
-        el.style.setProperty('color', '#000000', 'important');
-        el.style.setProperty('-webkit-text-fill-color', '#000000', 'important');
-        el.style.setProperty('background', '#ffffff', 'important');
-        el.style.setProperty('border', '1.5px solid rgba(255,255,255,0.18)', 'important');
-        el.style.setProperty('border-radius', '8px', 'important');
-        el.style.setProperty('padding', '13px 14px', 'important');
-        el.style.setProperty('font-size', '15px', 'important');
-        el.style.setProperty('font-family', "'Outfit', sans-serif", 'important');
-        el.style.setProperty('width', '100%', 'important');
-        el.style.setProperty('box-shadow', '0 1px 0 rgba(0,0,0,0.15)', 'important');
-      });
-      // Required asterisks → coral
-      root.querySelectorAll('.hs-form-required').forEach(function (el) {
-        el.style.setProperty('color', '#FE654F', 'important');
-        el.style.setProperty('-webkit-text-fill-color', '#FE654F', 'important');
-        el.style.setProperty('font-weight', '700', 'important');
-        el.style.setProperty('margin-left', '3px', 'important');
-      });
-      // Error messages → coral
-      root.querySelectorAll('.hs-error-msg, .hs-main-font-element').forEach(function (el) {
-        el.style.setProperty('color', '#FE654F', 'important');
-        el.style.setProperty('-webkit-text-fill-color', '#FE654F', 'important');
-        el.style.setProperty('font-size', '12px', 'important');
-        el.style.setProperty('font-weight', '600', 'important');
-      });
-    }
+    var form = document.getElementById('hs-modal-form');
+    if (form) {
+      form.addEventListener('submit', function (e) {
+        e.preventDefault();
 
-    // Render the HubSpot form into the modal container once the script loads.
-    function createForm() {
-      if (typeof hbspt === 'undefined' || !hbspt.forms) { return setTimeout(createForm, 80); }
-      hbspt.forms.create({
-        portalId: "1893269",
-        formId: "94f306c7-920b-46dc-8800-30c851ee532f",
-        region: "na1",
-        target: "#hs-modal-form",
-        onFormReady: function ($form) {
-          var root = document.getElementById('hs-modal-form');
-          paintForm(root);
-          // Re-paint at multiple intervals to catch async style injections
-          [50, 200, 500, 1200, 2500].forEach(function (t) {
-            setTimeout(function () { paintForm(root); }, t);
-          });
-          // MutationObserver — repaint on ANY DOM/attribute change inside the form.
-          // This is the bulletproof option: whenever HubSpot mutates a class,
-          // style attribute, or text node, we re-stamp our inline styles.
-          if (window.MutationObserver) {
-            var mo = new MutationObserver(function () { paintForm(root); });
-            mo.observe(root, {
-              childList: true,
-              subtree: true,
-              attributes: true,
-              attributeFilter: ['style', 'class']
-            });
+        var btn = form.querySelector('.form-submit');
+        var success = document.getElementById('mf-success');
+        var globalErr = document.getElementById('mf-global-error');
+
+        // Clear previous errors
+        form.querySelectorAll('.form-error').forEach(function (el) { el.classList.remove('visible'); });
+        globalErr.textContent = '';
+
+        // Client-side validation
+        var valid = true;
+        ['firstname','lastname','email','company'].forEach(function (name) {
+          var input = form.querySelector('[name="' + name + '"]');
+          var err = document.getElementById('err-' + name);
+          if (!input || !input.value.trim()) {
+            if (err) err.classList.add('visible');
+            valid = false;
           }
+        });
+        var emailInput = form.querySelector('[name="email"]');
+        if (emailInput && emailInput.value && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(emailInput.value)) {
+          var emailErr = document.getElementById('err-email');
+          if (emailErr) { emailErr.classList.add('visible'); }
+          valid = false;
         }
+        if (!valid) return;
+
+        btn.disabled = true;
+        btn.textContent = 'Submitting…';
+
+        var fields = [];
+        form.querySelectorAll('input, select, textarea').forEach(function (el) {
+          if (el.name && el.value.trim()) {
+            fields.push({ name: el.name, value: el.value.trim() });
+          }
+        });
+
+        fetch('https://api.hsforms.com/submissions/v3/integration/submit/1893269/1fdede2b-8339-40d4-b36a-9985fdbc7634', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            fields: fields,
+            context: { pageUri: window.location.href, pageName: document.title }
+          })
+        })
+        .then(function (res) {
+          if (!res.ok) return res.json().then(function (d) { throw new Error(d.message || 'Submission failed'); });
+          return res.json();
+        })
+        .then(function () {
+          form.querySelectorAll('.form-field, .form-submit').forEach(function (el) { el.style.display = 'none'; });
+          success.classList.add('visible');
+        })
+        .catch(function (err) {
+          btn.disabled = false;
+          btn.textContent = 'Book Your Strategy Call';
+          globalErr.textContent = 'Something went wrong — please try again or email us directly.';
+          globalErr.classList.add('visible');
+        });
       });
-
-      // Failsafe: paint the form periodically even if onFormReady never fires.
-      var failsafeRoot = document.getElementById('hs-modal-form');
-      var ticks = 0;
-      var failsafe = setInterval(function () {
-        ticks++;
-        paintForm(failsafeRoot);
-        if (ticks > 25) clearInterval(failsafe);   // stop after ~10s
-      }, 400);
     }
-    createForm();
 
-    // ----- Modal open/close wiring -----
     var modal = document.getElementById('ampleo-modal');
     if (!modal) return;
     var dialog = modal.querySelector('.ampleo-hr-modal__dialog');
@@ -1813,10 +1681,8 @@ body.modal-open { overflow: hidden; }
     function openModal(trigger) {
       lastFocus = trigger || document.activeElement;
       modal.hidden = false;
-      // Force a paint so the transition fires
       requestAnimationFrame(function () { modal.classList.add('is-open'); });
       document.body.classList.add('modal-open');
-      // Move focus into dialog for accessibility
       setTimeout(function () { dialog.setAttribute('tabindex', '-1'); dialog.focus(); }, 50);
     }
 
@@ -1827,21 +1693,14 @@ body.modal-open { overflow: hidden; }
       if (lastFocus && typeof lastFocus.focus === 'function') { lastFocus.focus(); }
     }
 
-    // Open: any [data-open-modal] click
     document.addEventListener('click', function (e) {
       var opener = e.target.closest('[data-open-modal]');
-      if (opener) {
-        e.preventDefault();
-        openModal(opener);
-        return;
-      }
+      if (opener) { e.preventDefault(); openModal(opener); return; }
       var closer = e.target.closest('[data-close-modal]');
       if (closer) { e.preventDefault(); closeModal(); return; }
-      // Click outside dialog closes
       if (modal.classList.contains('is-open') && e.target === modal) { closeModal(); }
     });
 
-    // ESC to close
     document.addEventListener('keydown', function (e) {
       if (e.key === 'Escape' && modal.classList.contains('is-open')) { closeModal(); }
     });
